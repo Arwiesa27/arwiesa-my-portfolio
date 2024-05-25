@@ -149,6 +149,11 @@ body {
 .home .content img {
   width: 320px;
   border-radius: 50%;
+  transition: all 0.45s;
+}
+.home .content img:hover {
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
 }
 .home .content h1 {
   color: var(--bg);
@@ -195,6 +200,19 @@ body {
 .about .content .skill img {
   width: 200px;
 }
+.about .content .skill figure {
+  transition: all 0.45s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.about .content .skill figure:hover {
+  transform: scale(0.9);
+  box-shadow: 5px 5px 20px 5px greenyellow;
+}
+
+/* .about .content .skill figure img:hover{
+  box-shadow: 5px 5px 20px 5px lightblue;
+} */
 .project {
   background-color: var(--primary);
   padding: 8rem;
@@ -251,7 +269,7 @@ body {
   padding: 0.5rem 1.5rem;
   border-radius: 0.2rem;
   cursor: pointer;
-  transition: all .30s;
+  transition: all 0.3s;
 }
 
 .contact {
@@ -296,6 +314,7 @@ body {
   background-color: var(--primary);
   margin-top: 0.5rem;
   cursor: pointer;
+  transition: all 0.45s;
 }
 .contact .content form .btn-kirim:hover {
   background-color: var(--bg);
@@ -313,16 +332,19 @@ footer .socials a {
   color: #fff;
   font-size: 8px;
   padding: 0 0.5rem;
+  transition: all 0.45s;
 }
 footer .socials a:hover,
 footer .links a:hover {
   color: var(--bg);
+  font-weight: 700;
 }
 footer .links a {
   color: #fff;
   text-transform: capitalize;
   font-size: 15px;
   padding: 0 1rem;
+  transition: all 0.45s;
 }
 footer .credit span {
   color: #fff;
@@ -331,3 +353,29 @@ footer .credit span {
 footer .credit span a {
   font-weight: 700;
 }
+
+/* Scroll Animation */
+.animation {
+  opacity: 0;
+  /* transform: translateX(-300px); */
+  transform: rotateY(180deg);
+  transition: all 0.7s ease-out;
+  transition-delay: 0.2s;
+}
+
+.scroll-animation {
+  transform: rotateY(0);
+  opacity: 1;
+  /* transform: translateX(0); */
+}
+/* .animation1 {
+  opacity: 0;
+  transform: translateY(-300px);
+  transition: all 0.7s ease-out;
+  transition-delay: 0.2s;
+}
+
+.scroll-animation1 {
+  opacity: 1;
+  transform: translateY(0);
+} */
