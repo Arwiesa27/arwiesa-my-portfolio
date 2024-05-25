@@ -30,23 +30,3 @@ const observer = new IntersectionObserver((entries) => {
 
     observer.observe(elements);
   }
-const animation1 = document.querySelectorAll('.animation1')
-const observer1 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('scroll-animation1')
-        }
-            else {
-                entry.target.classList.remove('scroll-animation1')
-            }
-        
-    })
-},
-   { threshold: 0.5
-   });
-//
-  for (let i = 0; i < animation1.length; i++) {
-   const elements = animation1[i];
-
-    observer.observe(elements);
-  }
